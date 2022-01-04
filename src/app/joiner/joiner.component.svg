@@ -1,0 +1,6 @@
+<svg:g xmlns:svg="http://www.w3.org/2000/svg">
+  <svg:path stroke-width="3" [attr.stroke-dasharray]="dash" [attr.stroke]="color" fill-opacity="0"
+            [attr.d]="curveCalculatorOrtho()">
+  </svg:path>
+  <svg:desc>{{title}}</svg:desc>
+</svg:g>

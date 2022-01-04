@@ -1,0 +1,18 @@
+<p>Demo of SVG lines</p>
+<app-box1 [title]="'instance A'" [top]="100"></app-box1>
+<app-box1 [title]="'instance B'" [top]="200" [left]="50"></app-box1>
+<app-box1 [title]="'instance C'" [top]="300" [left]="100"></app-box1>
+<app-box1 [title]="'upper box'" [top]="50" [left]="500"></app-box1>
+<app-box1 [title]="'lower box'" [top]="400" [left]="500"></app-box1>
+<svg:svg xmlns:svg="http://www.w3.org/2000/svg"
+         [attr.viewbox]="'0 0 ' + innerWidth + ' ' + innerHeight"
+         [attr.width]="innerWidth"
+         [attr.height]="innerHeight"
+         x="0" y="0"
+         [style]="'position: absolute'">
+  <svg:g app-joiner [title]="'upper-a'" [startX]="500" [startY]="50" [endX]="310" [endY]="100"></svg:g>
+  <svg:g app-joiner [title]="'upper-b'" [startX]="500" [startY]="50" [endX]="350" [endY]="200"></svg:g>
+
+  <svg:g app-joiner [dash]="'4 2'" [title]="'lower-a'" [startX]="500" [startY]="400" [endX]="400" [endY]="300" [color]="'#ff0000'"></svg:g>
+  <svg:g app-joiner [title]="'upper-c'" [startX]="500" [startY]="50" [endX]="400" [endY]="300" [color]="'#00ff00'"></svg:g>
+</svg:svg>
